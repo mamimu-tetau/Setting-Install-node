@@ -1,11 +1,6 @@
 ## vccw
 ##### vccw
 
-公式サイトからインストーラーをダウンロード
-https://nodejs.org/en/
-バージョン管理とかする場合はゴニョゴニョしてください。
-node.jsをインストールをするとnpmコマンドが使えるようになります。
-
 ```
 cd [directory]
 wp scaffold vccw [directory_name] --host=[host_name] --ip=192.168.33.10
