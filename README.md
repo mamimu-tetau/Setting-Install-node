@@ -246,6 +246,16 @@ $ vagrant global-status
 もしすでに起動中のゲストマシンがあれば、同じホスト名、同じIPアドレスでは起動できません。  
 さらに、```/etc/hosts```も確認してください。 Vagrant のプラグイン hosts-updater を使用するとホストの情報を自動的に書き込んでくれますが、この情報がうまく削除されずに残っていることがあります。
 
+## VCCWにphpMyAdminを入れる
+下記よりダウンロードしたzipを解答し、フォルダ名を「phpmyadmin」と変更します。変更した「phpmyadmin」フォルダを「wordpress」下に設置します。
+[phpMyadmin](https://www.phpmyadmin.net/downloads/)
+
+``
+vagrant up
+vagrant ssh(必要？)
+```
+vagrantを起動して「http://192.168.33.10/phpmyadmin」とアドレスバーに入力します。「192.168.33.10」はVCCWを導入する準備として、hostsに設定したものになります。  
+初期設定ではユーザー名は「root」、パスワードは「wordpress」となっています。
 
 ## VCCWとgulpとbrowsersync
 hostsにipv6用のアドレスも追加しないと激重  
