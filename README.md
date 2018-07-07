@@ -248,7 +248,7 @@ $ vagrant global-status
 
 
 ## VCCWとgulpとbrowsersync
-hostsにipv6用のアドレスも追加しないと激重
+hostsにipv6用のアドレスも追加しないと激重  
 viエディタの使い方は調べてね
 ```
 vi /private/etc/hosts
