@@ -143,8 +143,8 @@ source ~/.wp-completion.bash
 
 
 
-# 初心者がコマンドと付き合うときに最低限覚えておくべきこと
-## sudo は安易に実行しない
+## 初心者がコマンドと付き合うときに最低限覚えておくべきこと
+### sudo は安易に実行しない
 ```sudo```は root 権限と呼ばれるとても大きな権限でコマンドを実行するために使用します。  
 この記事で```sudo```を一度も実行していないことからも分かる通り、ローカル環境で```sudo```を使用することはめったにありません。  
 一度これで実行してしまうと次回以降つねに```sudo```をしてしまわないといけなくなりますし、権限が大きいためにシステムのトラブルを招きやすいだけでなく悪意があるコードをとても大きな権限で実行してしまうリスクもあります。  
@@ -269,6 +269,48 @@ $ wp browse --wp-admin
 
 
 
+## VCCWにphpMyAdminを入れる
+下記よりダウンロードしたzipを解答し、フォルダ名を「phpmyadmin」と変更します。変更した「phpmyadmin」フォルダを「wordpress」下に設置します。
+[phpMyadmin](https://www.phpmyadmin.net/downloads/)
+
+```
+vagrant up
+vagrant ssh(必要？)
+```
+vagrantを起動して「http://192.168.33.10/phpmyadmin」とアドレスバーに入力します。「192.168.33.10」はVCCWを導入する準備として、hostsに設定したものになります。  
+初期設定ではユーザー名は「root」、パスワードは「wordpress」となっています。
+<br /><br /><br /><br />
+
+
+## VCCWのDBまるごと共有する
+
+起動  
+```
+$ vagrant up
+```
+マシンに入る
+```
+$ vagrant ssh
+```
+dbをエクスポート
+```
+$ wp db export /vagrant/wordpress.sql
+```
+以上で、ホストマシンから見ると Vagrantfile と同じディレクトリに wordpress.sql というファイルができてるはず。  
+アップした画像とかもろもろ共有したい場合は
+```gitignore```の
+```
+wp-content/upload/
+```
+とか
+/sitemap.xml.gzさk
+/sitemap.xml.gz
+
+
+
+
+
+
 ## VCCWとgit
 データベースのデータのバックアップを作成
 ```
@@ -292,16 +334,7 @@ $ vagrant global-status
 もしすでに起動中のゲストマシンがあれば、同じホスト名、同じIPアドレスでは起動できません。  
 さらに、```/etc/hosts```も確認してください。 Vagrant のプラグイン hosts-updater を使用するとホストの情報を自動的に書き込んでくれますが、この情報がうまく削除されずに残っていることがあります。
 
-## VCCWにphpMyAdminを入れる
-下記よりダウンロードしたzipを解答し、フォルダ名を「phpmyadmin」と変更します。変更した「phpmyadmin」フォルダを「wordpress」下に設置します。
-[phpMyadmin](https://www.phpmyadmin.net/downloads/)
 
-```
-vagrant up
-vagrant ssh(必要？)
-```
-vagrantを起動して「http://192.168.33.10/phpmyadmin」とアドレスバーに入力します。「192.168.33.10」はVCCWを導入する準備として、hostsに設定したものになります。  
-初期設定ではユーザー名は「root」、パスワードは「wordpress」となっています。
 
 ## VCCWとgulpとbrowsersync
 hostsにipv6用のアドレスも追加しないと激重  
