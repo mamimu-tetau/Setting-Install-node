@@ -118,7 +118,45 @@ source ~/.wp-completion.bash
 ターミナルを開き直すか```source ~/.bash_profile```コマンドを実行して設定を反映させてください
 
 
-##### vccw
+# 初心者がコマンドと付き合うときに最低限覚えておくべきこと
+## sudo は安易に実行しない
+```sudo```は root 権限と呼ばれるとても大きな権限でコマンドを実行するために使用します。
+この記事で```sudo```を一度も実行していないことからも分かる通り、ローカル環境で```sudo```を使用することはめったにありません。
+一度これで実行してしまうと次回以降つねに```sudo```をしてしまわないといけなくなりますし、権限が大きいためにシステムのトラブルを招きやすいだけでなく悪意があるコードをとても大きな権限で実行してしまうリスクもあります。
+```sudo```は使用しないでください。また安易に```sudo```を書いてあるブログ等は見る価値がありません。
+
+## 仮想環境のインストール
+
+### Vagrantインストール
+[Vagrant](https://www.vagrantup.com/downloads.html?utm_source=capitalp&utm_campaign=SponsorUs&utm_medium=voluntary_link)
+
+
+### Virtualboxインストール
+[Virtualbox](http://www.oracle.com/technetwork/server-storage/virtualbox/downloads/index.html?ssSourceSiteId=otnjp&utm_source=capitalp&utm_campaign=SponsorUs&utm_medium=voluntary_link)
+
+#### Vagrantプラグインインストール
+```
+$ vagrant plugin install vagrant-hostsupdater
+```
+```
+$ curl https://raw.github.com/brbsix/vagrant-bash-completion/master/vagrant-bash-completion/etc/bash_completion.d/vagrant -o vagrant
+$ mv vagrant `brew --prefix`/etc/bash_completion.d/
+```
+最後に以下のコードを```~/.bash_profile```にコピペして```、source ~/.bash_profile```するかターミナルを再起動してください。
+```
+if [ -f `brew --prefix`/etc/bash_completion.d/vagrant ]; then
+    source `brew --prefix`/etc/bash_completion.d/vagrant
+fi
+```
+
+### Varantの使い方
+
+```vagrant up``` – 起動
+```vagrant halt``` –  停止
+```vagrant destroy``` – 廃棄
+```vagrant provision``` – 再構築
+```vagrant global-status``` – 全マシンのステータスを確認
+
 
 ```
 cd [directory]
