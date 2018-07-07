@@ -297,14 +297,19 @@ dbをエクスポート
 $ wp db export /vagrant/wordpress.sql
 ```
 以上で、ホストマシンから見ると Vagrantfile と同じディレクトリに wordpress.sql というファイルができてるはず。  
+
+#### vagrant upでsqlを自動インポートさせる。
+VCCWでは、proivision/provision-post.shというシェルスクリプトを用意しておくと、プロビジョニングの最後にそのシェルスクリプトが発火するようになっています。  
+そこで、proivision/provision-post.shというファイルを用意して、Vagrantfile と同じディレクトリに設置してください。  
+これでまるごとgitにシェアしてダウンロードすれば環境共有できます。  
+<br /><br />
+
 アップした画像とかもろもろ共有したい場合は
-```gitignore```の
+```/wordpress/gitignore```の
 ```
 wp-content/upload/
 ```
-とか
-/sitemap.xml.gzさk
-/sitemap.xml.gz
+とか削除してからgit commitしてください。
 
 
 
