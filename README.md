@@ -96,9 +96,9 @@ $ brew install ruby
 ```
 
 ## Gitの設定
-Gitにユーザー名とメールアドレスを設定します。今回は無難にGitHubのユーザー名とメールアドレスを設定しましょう。
-GitHubにサインアップしていない場合はサインアップしてください。
-サインアップしたらGitHubのユーザー名を以下のように設定します。 username の部分をみなさんのGitHubのユーザー名と置き換えてください。
+Gitにユーザー名とメールアドレスを設定します。今回は無難にGitHubのユーザー名とメールアドレスを設定しましょう。  
+GitHubにサインアップしていない場合はサインアップしてください。  
+サインアップしたらGitHubのユーザー名を以下のように設定します。 username の部分をみなさんのGitHubのユーザー名と置き換えてください。  
 ```
 $ git config user.name "username"
 ```
@@ -115,14 +115,14 @@ $ curl -L https://raw.githubusercontent.com/wp-cli/wp-cli/master/utils/wp-comple
 ```
 source ~/.wp-completion.bash
 ```
-ターミナルを開き直すか```source ~/.bash_profile```コマンドを実行して設定を反映させてください
+ターミナルを開き直すか```source ~/.bash_profile```コマンドを実行して設定を反映させてください  
 
 
 # 初心者がコマンドと付き合うときに最低限覚えておくべきこと
 ## sudo は安易に実行しない
-```sudo```は root 権限と呼ばれるとても大きな権限でコマンドを実行するために使用します。
-この記事で```sudo```を一度も実行していないことからも分かる通り、ローカル環境で```sudo```を使用することはめったにありません。
-一度これで実行してしまうと次回以降つねに```sudo```をしてしまわないといけなくなりますし、権限が大きいためにシステムのトラブルを招きやすいだけでなく悪意があるコードをとても大きな権限で実行してしまうリスクもあります。
+```sudo```は root 権限と呼ばれるとても大きな権限でコマンドを実行するために使用します。  
+この記事で```sudo```を一度も実行していないことからも分かる通り、ローカル環境で```sudo```を使用することはめったにありません。  
+一度これで実行してしまうと次回以降つねに```sudo```をしてしまわないといけなくなりますし、権限が大きいためにシステムのトラブルを招きやすいだけでなく悪意があるコードをとても大きな権限で実行してしまうリスクもあります。  
 ```sudo```は使用しないでください。また安易に```sudo```を書いてあるブログ等は見る価値がありません。
 
 ## 仮想環境のインストール
@@ -151,11 +151,46 @@ fi
 
 ### Varantの使い方
 
-```vagrant up``` – 起動 
-```vagrant halt``` –  停止 
-```vagrant destroy``` – 廃棄 
-```vagrant provision``` – 再構築 
-```vagrant global-status``` – 全マシンのステータスを確認 
+```vagrant up``` – 起動  
+```vagrant halt``` –  停止  
+```vagrant destroy``` – 廃棄  
+```vagrant provision``` – 再構築  
+```vagrant global-status``` – 全マシンのステータスを確認  
+
+
+## VCCW
+VVVとの最大の違いはWordPress本体の開発を想定していないことです。  
+VCCWはWordPress本体の開発に必要な様々なパッケージ類をダウンロードしない一方で、ウェブサイトやテーマ、プラグインの開発に特化しているため、VVVに比べて起動が早く使用するディスク容量も比較的小さくなっています。  
+YAMLファイルやシェルスクリプト、Ansibleによるカスタマイズも可能で、初回のBoxのダウンロードを除くと最小構成で2分ほどで起動します。  
+
+### VCCWの使用方法
+VCCW環境を簡単につくるための WP-CLI 環境が用意されています。まずそれをインストールしましょう。
+```
+$ wp package install vccw/scaffold-vccw:@stable
+```
+もしかしたら以下のようにメモリが足らないというエラーがでるかもしれません。
+```
+PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted
+```
+その場合は以下のようにして一時的にPHPのメモリーリミットを無制限にして実行します。
+```
+php -d memory_limit=-1 /usr/local/bin/wp package install vccw/scaffold-vccw:@stable
+```
+  
+次にVCCWの設定ファイルをつくります。  
+以下の内容を ~/.vccw/config.yml に記述してください。  
+```
+memory: 1024
+cpus: 2
+linked_clone: true
+```
+```config.yml```がなかったら作ります
+```
+cd ~/.vccw
+touch config.yml
+```
+
+
 
 
 ```
