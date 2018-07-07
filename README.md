@@ -224,10 +224,18 @@ $ wp browse --wp-admin
 ```
 
 
-
-
-
-
+### VCCWとgulpとbroe¥wsersync
+hostsにipv6用のアドレスも追加しないと激重
+viエディタの使い方は調べてね
+```
+vi /private/etc/hosts
+```
+下記を追記
+```
+::ffff:c0a8:210a ドメイン
+```
+192.168.33.10の場合は::ffff:c0a8:210aな感じで変換して書いておく
+[ipアドレス変換](https://awebanalysis.com/ja/ipv4-to-ipv6-convert/)
 
 
 ```
