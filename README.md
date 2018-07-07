@@ -358,6 +358,8 @@ $ wp db export /vagrant/wordpress.sql
 $ vagrant destroy
 ```
 で仮想マシンをすててしまってgitにあげてしまう。```git clone```して、```vagrant up```すれば復活する。
+<br /><br /><br /><br />
+
 
 
 ## うまく動かない！！
@@ -367,7 +369,7 @@ $ vagrant global-status
 で他のマシンが無いか確認して見てください。  
 もしすでに起動中のゲストマシンがあれば、同じホスト名、同じIPアドレスでは起動できません。  
 さらに、```/etc/hosts```も確認してください。 Vagrant のプラグイン hosts-updater を使用するとホストの情報を自動的に書き込んでくれますが、この情報がうまく削除されずに残っていることがあります。
-
+<br /><br /><br /><br />
 
 
 ## VCCWとgulpとbrowsersync
@@ -382,6 +384,8 @@ vi /private/etc/hosts
 ```
 192.168.33.10をipv6に変換すると→::ffff:c0a8:210aな感じで変換して書いておく  
 [ipアドレス変換サイト](https://awebanalysis.com/ja/ipv4-to-ipv6-convert/)
+<br /><br /><br /><br />
+
 
 
 ```
