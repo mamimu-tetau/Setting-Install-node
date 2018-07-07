@@ -151,11 +151,11 @@ fi
 
 ### Varantの使い方
 
-```vagrant up``` – 起動
-```vagrant halt``` –  停止
-```vagrant destroy``` – 廃棄
-```vagrant provision``` – 再構築
-```vagrant global-status``` – 全マシンのステータスを確認
+```vagrant up``` – 起動 
+```vagrant halt``` –  停止 
+```vagrant destroy``` – 廃棄 
+```vagrant provision``` – 再構築 
+```vagrant global-status``` – 全マシンのステータスを確認 
 
 
 ```
