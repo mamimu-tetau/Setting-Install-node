@@ -250,7 +250,7 @@ $ vagrant global-status
 下記よりダウンロードしたzipを解答し、フォルダ名を「phpmyadmin」と変更します。変更した「phpmyadmin」フォルダを「wordpress」下に設置します。
 [phpMyadmin](https://www.phpmyadmin.net/downloads/)
 
-``
+```
 vagrant up
 vagrant ssh(必要？)
 ```
