@@ -223,8 +223,31 @@ $ wp browse
 $ wp browse --wp-admin
 ```
 
+## VCCWとgit
+データベースのデータのバックアップを作成
+```
+$ vagrant ssh
+```
+```
+$ wp db export /vagrant/wordpress.sql
+```
+以上で、Vagrantfile と同じディレクトリに wordpress.sql というファイルができてるはず。
+```
+$ vagrant destroy
+```
+で仮想マシンをすててしまってgitにあげてしまう。```git clone```して、```vagrant up```すれば復活する。
 
-### VCCWとgulpとbroe¥wsersync
+
+## うまく動かない！！
+```
+$ vagrant global-status
+```
+で他のマシンが無いか確認して見てください。  
+もしすでに起動中のゲストマシンがあれば、同じホスト名、同じIPアドレスでは起動できません。  
+さらに、```/etc/hosts```も確認してください。 Vagrant のプラグイン hosts-updater を使用するとホストの情報を自動的に書き込んでくれますが、この情報がうまく削除されずに残っていることがあります。
+
+
+## VCCWとgulpとbrowsersync
 hostsにipv6用のアドレスも追加しないと激重
 viエディタの使い方は調べてね
 ```
@@ -234,8 +257,8 @@ vi /private/etc/hosts
 ```
 ::ffff:c0a8:210a ドメイン
 ```
-192.168.33.10の場合は::ffff:c0a8:210aな感じで変換して書いておく
-[ipアドレス変換](https://awebanalysis.com/ja/ipv4-to-ipv6-convert/)
+192.168.33.10をipv6に変換すると→::ffff:c0a8:210aな感じで変換して書いておく  
+[ipアドレス変換サイト](https://awebanalysis.com/ja/ipv4-to-ipv6-convert/)
 
 
 ```
