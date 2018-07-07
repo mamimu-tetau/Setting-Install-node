@@ -22,6 +22,9 @@ Your system is ready to brew.
 上のように Your system is ready to brew と表示されれば大丈夫。そうじゃなければ表示されているメッセージをよく読んで問題を解決しましょう。
 ここで適当にあきらめて次の処理に進んでも絶対にうまく行きません。
 nodeとかパッケージ版でインストールしているとガンガンエラー出ますw
+<br /><br /><br /><br />
+
+
 
 
 ##### Homebrewは定期的にメンテナンスが必要です。以下のコマンドは手が空いたときにやっておきましょう。
@@ -38,6 +41,10 @@ Homebrewの動作テスト
 ```
 $ brew doctor
 ```
+<br /><br /><br /><br />
+
+
+
 
 ## 主要なコマンドのインストール
 
@@ -60,6 +67,10 @@ $ brew install mysql
 ```
 $ brew services start mysql
 ```
+<br /><br /><br /><br />
+
+
+
 
 ## WP-CLIのインストール
 ```
@@ -83,17 +94,25 @@ WP-CLI project config:
 WP-CLI version:	1.5.0-alpha-d71d228
 ```
 この時点でうまく行っていなければ一番最初からやり直してください。
+<br /><br /><br /><br />
+
 
 
 ## Nodeのインストール
 ```
 $ brew install node
 ```
+<br /><br /><br /><br />
+
+
 
 ## Rubyのインストール
 ```
 $ brew install ruby
 ```
+<br /><br /><br /><br />
+
+
 
 ## Gitの設定
 Gitにユーザー名とメールアドレスを設定します。今回は無難にGitHubのユーザー名とメールアドレスを設定しましょう。  
@@ -105,6 +124,9 @@ $ git config user.name "username"
 ```
 git config user.email "xxx@xxx.com"
 ```
+<br /><br /><br /><br />
+
+
 
 ## WP-CLIのコマンド補完を有効化する
 以下のコマンドで必要なスクリプトをインストールします。
@@ -116,6 +138,9 @@ $ curl -L https://raw.githubusercontent.com/wp-cli/wp-cli/master/utils/wp-comple
 source ~/.wp-completion.bash
 ```
 ターミナルを開き直すか```source ~/.bash_profile```コマンドを実行して設定を反映させてください  
+<br /><br /><br /><br />
+
+
 
 
 # 初心者がコマンドと付き合うときに最低限覚えておくべきこと
@@ -124,6 +149,9 @@ source ~/.wp-completion.bash
 この記事で```sudo```を一度も実行していないことからも分かる通り、ローカル環境で```sudo```を使用することはめったにありません。  
 一度これで実行してしまうと次回以降つねに```sudo```をしてしまわないといけなくなりますし、権限が大きいためにシステムのトラブルを招きやすいだけでなく悪意があるコードをとても大きな権限で実行してしまうリスクもあります。  
 ```sudo```は使用しないでください。また安易に```sudo```を書いてあるブログ等は見る価値がありません。
+<br /><br /><br /><br />
+
+
 
 ## 仮想環境のインストール
 
@@ -148,6 +176,10 @@ if [ -f `brew --prefix`/etc/bash_completion.d/vagrant ]; then
     source `brew --prefix`/etc/bash_completion.d/vagrant
 fi
 ```
+<br /><br /><br /><br />
+
+
+
 
 ### Varantの使い方
 
@@ -156,12 +188,18 @@ fi
 ```vagrant destroy``` – 廃棄  
 ```vagrant provision``` – 再構築  
 ```vagrant global-status``` – 全マシンのステータスを確認  
+<br /><br /><br /><br />
+
+
 
 
 ## VCCW
 VVVとの最大の違いはWordPress本体の開発を想定していないことです。  
 VCCWはWordPress本体の開発に必要な様々なパッケージ類をダウンロードしない一方で、ウェブサイトやテーマ、プラグインの開発に特化しているため、VVVに比べて起動が早く使用するディスク容量も比較的小さくなっています。  
 YAMLファイルやシェルスクリプト、Ansibleによるカスタマイズも可能で、初回のBoxのダウンロードを除くと最小構成で2分ほどで起動します。  
+<br /><br /><br /><br />
+
+
 
 ### VCCWの使用方法
 VCCW環境を簡単につくるための WP-CLI 環境が用意されています。まずそれをインストールしましょう。
@@ -194,6 +232,10 @@ mkdir -p ~/.vccw
 ```
 touch ~/.vccw/config.yml
 ```
+<br /><br /><br /><br />
+
+
+
 
 ### VCCW起動
 ここからが新しく環境を作る時に毎回行うやつです。
@@ -222,6 +264,10 @@ $ wp browse
 ```
 $ wp browse --wp-admin
 ```
+<br /><br /><br /><br />
+
+
+
 
 ## VCCWとgit
 データベースのデータのバックアップを作成
