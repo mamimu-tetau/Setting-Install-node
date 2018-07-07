@@ -184,11 +184,48 @@ memory: 1024
 cpus: 2
 linked_clone: true
 ```
+  
+```.vccw```がなかったら作ります
+```
+mkdir -p ~/.vccw
+```
+  
 ```config.yml```がなかったら作ります
 ```
-cd ~/.vccw
-touch config.yml
+touch ~/.vccw/config.yml
 ```
+
+### VCCW起動
+ここからが新しく環境を作る時に毎回行うやつです。
+今回はデスクトップに作ります
+```
+$ cd ~/Desktop
+$ wp scaffold vccw vccw.test --host=vccw.test --ip=192.168.33.10
+```
+```wp scaffold vccw [ディレクトリ名] --host=[ドメイン] --ip=192.168.33.10```
+ホスト名 vccw.test の部分と IP アドレス 192.168.33.10 はお好みでどうぞ。  
+  
+次にマシンを起動します。最初はBoxと呼ばれるベースになるハードディスクイメージをダウンロードしますので20分ほど時間がかかるかもしれません。
+```
+$ cd vccw.test
+$ vagrant up
+```
+終わったらブラウザでサイトにアクセスしてみましょう。
+[http://vccw.test/](http://vccw.test/)
+
+以下のコマンドを実行することで開くこともできます。
+```
+$ wp browse
+```
+
+管理画面なら以下のような感じ。
+```
+$ wp browse --wp-admin
+```
+
+
+
+
 
 
 
