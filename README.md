@@ -299,9 +299,19 @@ $ wp db export /vagrant/wordpress.sql
 以上で、ホストマシンから見ると Vagrantfile と同じディレクトリに wordpress.sql というファイルができてるはず。  
 
 #### vagrant upでsqlを自動インポートさせる。
-VCCWでは、proivision/provision-post.shというシェルスクリプトを用意しておくと、プロビジョニングの最後にそのシェルスクリプトが発火するようになっています。  
-そこで、proivision/provision-post.shというファイルを用意して、Vagrantfile と同じディレクトリに設置してください。  
+VCCWでは、provision-post.shというシェルスクリプトを用意しておくと、プロビジョニングの最後にそのシェルスクリプトが発火するようになっています。  
+そこで、provision-post.shというファイルに下記を記述し、Vagrantfile と同じディレクトリに設置してください。  
 これでまるごとgitにシェアしてダウンロードすれば環境共有できます。  
+```
+#!/usr/bin/env bash
+
+set -ex
+
+if [ -e /vagrant/wordpress.sql ]; then
+  sudo -u vagrant -- wp db import /vagrant/wordpress.sql
+fi
+
+```
 <br /><br />
 
 アップした画像とかもろもろ共有したい場合は
@@ -311,7 +321,26 @@ wp-content/upload/
 ```
 とか削除してからgit commitしてください。
 
+dbの変更をシェアする場合は毎回エクスポートして別環境でインポート(vagrant up)してください。
+```
+$ vagrant ssh
+$ wp db export /vagrant/wordpress.sql
+```
 
+インポートは
+```
+$ vagrant up
+```
+もしくは
+```
+$ vagrant ssh
+$ wp db import /vagrant/wordpress.sql
+```
+もしくは
+```
+$ vagrant provison
+```
+<br /><br /><br /><br />
 
 
 
