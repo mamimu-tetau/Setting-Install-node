@@ -388,11 +388,11 @@ vi /private/etc/hosts
 
 
 
-```
-cd [directory]
-wp scaffold vccw [directory_name] --host=[host_name] --ip=192.168.33.10
-ex) wp scaffold vccw vccw.test --host=vccw.test --ip=192.168.33.10
-```
+# TroubleShoot
 
+## vagrant upでbox already exist
+VMを
+## vagrant upでbox already exist
+## vagrant upでbox alrea
 
 
