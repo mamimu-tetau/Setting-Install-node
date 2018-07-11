@@ -391,8 +391,25 @@ vi /private/etc/hosts
 # TroubleShoot
 
 ## vagrant upでbox already exist
-VMを
-## vagrant upでbox already exist
-## vagrant upでbox alrea
+VMをdestroyしないままディレクトリ削除したりするとなる？
 
+```
+vagrant global-status
+```
+で起動中や存在するBOXを確認する。
 
+```
+vagrant destory ボックス名
+```
+で削除。下記のエラーが出るかも。
+```
+A virtualBox machine with the name .... already exist
+```
+まずは
+
+```
+vagrant global-status --prune
+```
+でキャッシュを削除
+
+それでダメなら
