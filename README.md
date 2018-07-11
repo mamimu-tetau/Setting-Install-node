@@ -412,4 +412,4 @@ vagrant global-status --prune
 ```
 でキャッシュを削除
 
-それでダメなら
+それでダメなら/User/あなた/VirtualBox VMs/該当ディレクトリ削除
