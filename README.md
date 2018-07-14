@@ -374,13 +374,17 @@ vagrantを起動して「http://192.168.33.10/phpmyadmin」とアドレスバー
 <br /><br /><br /><br />
 
 
-## VCCWのDBまるごと共有する
+## VCCWのDBまるごとgitとかで共有する
 
 流れ的には
 
 - DBバックアップ
-- VM止める
-- gitにアップ(```/wordpress/gitignore```で共有内容確認)
+- VM止める(```vagrant halt```もしくは```vagrant destroy```で共有内容確認)
+- ```/wordpress/gitignore```で共有内容確認
+- git commit（リポジトリ作ってコミット)
+- git commit（リポジトリ作ってコミット)
+- git push(ロモー)
+- git commit（リポジトリ作ってコミット)
 - git clone
 - vagrant up（provision-post.shでDBインポート）
 
@@ -398,8 +402,9 @@ dbをエクスポート
 $ wp db export /vagrant/wordpress.sql
 ```
 以上で、ホストマシンから見ると Vagrantfile と同じディレクトリに wordpress.sql というファイルができてるはず。  
+<br /><br />
 
-#### vagrant upでsqlを自動インポートさせる。
+### vagrant upでsqlを自動インポートさせる。
 VCCWでは、provision-post.shというシェルスクリプトを用意しておくと、プロビジョニングの最後にそのシェルスクリプトが発火するようになっています。  
 そこで、provision-post.shというファイルに下記を記述し、Vagrantfile と同じディレクトリに設置してください。  
 これでまるごとgitにシェアしてダウンロードすれば環境共有できます。  
@@ -443,23 +448,6 @@ $ vagrant provison
 ```
 <br /><br /><br /><br />
 
-
-
-
-## VCCWとgit
-データベースのデータのバックアップを作成
-```
-$ vagrant ssh
-```
-```
-$ wp db export /vagrant/wordpress.sql
-```
-以上で、Vagrantfile と同じディレクトリに wordpress.sql というファイルができてるはず。
-```
-$ vagrant destroy
-```
-で仮想マシンをすててしまってgitにあげてしまう。```git clone```して、```vagrant up```すれば復活する。
-<br /><br /><br /><br />
 
 
 
