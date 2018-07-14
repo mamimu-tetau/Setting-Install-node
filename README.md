@@ -134,8 +134,8 @@ Export a path to nodebrew:
 export PATH=$HOME/.nodebrew/current/bin:$PATH
 ========================================
 ```
-とかってですので```.bash_profile```に```export PATH=$HOME/.nodebrew/current/bin:$PATH```のPATHを追加（1行目とかに）
-viコマンドが初めての場合！！！ってなるかも。まずは基本的なviエディタの使い方は調べてね。  
+とかってでるので```.bash_profile```に```export PATH=$HOME/.nodebrew/current/bin:$PATH```のPATHを追加（1行目とかに）<br /><br />
+viコマンドが初めての場合！！！ってなるかも。まずは基本的なviエディタの使い方は調べてね。  <br /><br />
 私の場合```i```キー押して通常のモードにして操作します。で```esc```キー押してコマンドモードに戻って```:wq```で保存です。やばい時は```esc```からの```:q!```で何もせず戻るw  
 ```
 $ vi ~/.bash_profile
