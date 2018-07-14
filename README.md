@@ -36,7 +36,7 @@
   - [vccw起動](#vccw起動)
   - [vccwにphpMyAdminを入れる](#vccwにphpmyadminを入れる)
   - [vccwのDBまるごと共有する](#vccwのdbまるごと共有する)
-  - [vagrant upでsqlを自動インポートさせる。](#vagrant upでsqlを自動インポートさせる。)
+  - [vagrant upでsqlを自動インポートさせる。](#vagrant-upでsqlを自動インポートさせる)
   - [vccwとgit](#vccwとgit)
   - [うまく動かない！！](#うまく動かない！！)
   - [VCCWとgulpとbrowsersync](#vccwとgulpとbrowsersync)
