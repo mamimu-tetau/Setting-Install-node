@@ -11,26 +11,26 @@
   - [gitインストール](#gitインストール)
   - [PHPインストール](#PHPインストール)
   - [MySQLのインストール](#MySQLのインストール)
-<br />
+
 - [ WP-CLIのインストール](#wp-cliのインストール)
-<br />
+
 - [Nodeのインストール](#Nodeのインストール)
   - [nodebrewをインストール](#nodebrewをインストール)
   - [nodebrewで使いたいバージョン選択](#nodebrewで使いたいバージョン選択)
-<br />
+
 - [Rubyのインストール](#Rubyのインストール)
-<br />
+
 - [Gitの設定](#Gitの設定)
-<br />
+
 - [WP-CLIのコマンド補完を有効化する](#wp-cliのコマンド補完を有効化する)
-<br />
+
 - [仮想環境のインストール](#仮想環境のインストール)
   - [Vagrantインストール](#vagrantインストール)
   - [Virtualboxインストール](#virtualboxインストール)
   - [Vagrantプラグインインストール](#vagrantプラグインインストール)
-<br />
+
 - [Varantの使い方](#vagrantの使い方)
-<br />
+
 - [vccw](#vccw)
   - [vccwの使用方法](#vccwの使用方法)
   - [vccw起動](#vccw起動)
@@ -40,7 +40,7 @@
   - [vccwとgit](#vccwとgit)
   - [うまく動かない！！](#うまく動かない！！)
   - [VCCWとgulpとbrowsersync](#vccwとgulpとbrowsersync)
-<br />
+
 - [TroubleShoot](#troubleshoot)
 <br /><br /><br /><br />
 
