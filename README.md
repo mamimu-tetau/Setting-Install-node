@@ -382,8 +382,7 @@ vagrantを起動して「http://192.168.33.10/phpmyadmin」とアドレスバー
 - VM止める(```vagrant halt```もしくは```vagrant destroy```で共有内容確認)
 - ```/wordpress/gitignore```の共有内容確認
 - git commit（リポジトリ作ってコミット)
-- git push(リモートリポジトリにアップ)
-- git commit（リポジトリ作ってコミット)
+- git push（リモートリポジトリにアップ)
 - git clone
 - vagrant up（provision-post.shでDBインポート）
 
