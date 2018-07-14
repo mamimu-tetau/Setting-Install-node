@@ -380,10 +380,9 @@ vagrantを起動して「http://192.168.33.10/phpmyadmin」とアドレスバー
 
 - DBバックアップ
 - VM止める(```vagrant halt```もしくは```vagrant destroy```で共有内容確認)
-- ```/wordpress/gitignore```で共有内容確認
+- ```/wordpress/gitignore```の共有内容確認
 - git commit（リポジトリ作ってコミット)
-- git commit（リポジトリ作ってコミット)
-- git push(ロモー)
+- git push(リモートリポジトリにアップ)
 - git commit（リポジトリ作ってコミット)
 - git clone
 - vagrant up（provision-post.shでDBインポート）
@@ -420,12 +419,15 @@ fi
 ```
 <br /><br />
 
+### ```/wordpress/gitignore```の共有内容確認
+
 アップした画像とかもろもろ共有したい場合は
 ```/wordpress/gitignore```の
 ```
 wp-content/upload/
 ```
 とか削除してからgit commitしてください。
+<br /><br />
 
 dbの変更をシェアする場合は毎回エクスポートして別環境でインポート(vagrant up)してください。
 ```
