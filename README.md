@@ -376,7 +376,16 @@ vagrantを起動して「http://192.168.33.10/phpmyadmin」とアドレスバー
 
 ## VCCWのDBまるごと共有する
 
-起動  
+流れ的には
+
+- DBバックアップ
+- VM止める
+- gitにアップ(```/wordpress/gitignore```で共有内容確認)
+- git clone
+- vagrant up（provision-post.shでDBインポート）
+
+
+### DBバックアップ 
 ```
 $ vagrant up
 ```
