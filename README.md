@@ -1,16 +1,16 @@
 # vccw
 
-# TOC
-- [Installation](#installation)
-- [Usage](#usage)
-- [License](#license)
+## Table of Contens
+- [Homebrew](#Homebrewのインストール)
+- [Xcode](#Xcodeインストール)
+- [Homebrew](#Homebrewインストール)
 
 
 https://capitalp.jp/2017/12/16/naoki-1/
 だいたいここ参照させていただいてます。
 <br /><br /><br /><br />
 
-## Homebrewのインストール
+## Homebrew
 
 ### Xcodeインストール
 ```
