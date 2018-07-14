@@ -58,8 +58,8 @@ $ brew install php72
 ```
 最新版をインストールしときます？
 
-## MySQLのインストール
-### gitインストール
+
+### MySQLのインストール
 ```
 $ brew install mysql
 ```
