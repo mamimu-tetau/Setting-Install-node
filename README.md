@@ -99,9 +99,52 @@ WP-CLI version:	1.5.0-alpha-d71d228
 
 
 ## Nodeのインストール
+
+gulpでgulp-sassを使う場合バージョン8.xが求められたのでnodeのバージョンを切り替えられるnodebrewでのインストールを推しますw
 ```
-$ brew install node
+Found bindings for the following environments:
+  - OS X 64-bit with Node.js 8.x
 ```
+こんなエラー <br /><br /> 
+
+homebrewでnodeもインストールしていた場合はnodeをアンインストール  
+（パッケージ版のnodeをすでにインストールしている場合は。。。苦戦してくだしあ）  
+```
+$ brew uninstall --force node
+```
+#### nodebrewをインストール
+```
+$ brew install nodebrew
+$ nodebrew
+```
+nodebrewで使えるコマンドが出てくればOK
+
+#### nodebrewで使いたいバージョンのnodeをインストール
+```
+$ nodebrew install-binary v8.11.3
+```
+セットアップ
+```
+$ nodebrew setup
+```
+```
+========================================
+Export a path to nodebrew:
+
+
+========================================
+```
+とかってですので```.bash_profile```に```export PATH=$HOME/.nodebrew/current/bin:$PATH```のPATHを追加（1行目とかに）
+```
+$ vi ~/.bash_profile
+```
+有効化
+export PATH=$HOME/.nodebrew/current/bin:$PATH
+```
+$ source ~/.bash_profile
+```
+
+
 <br /><br /><br /><br />
 
 
