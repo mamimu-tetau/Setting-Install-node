@@ -4,10 +4,11 @@
 - [Homebrew](#homebrew)
   - [Xcodeインストール](#xcodeインストール)
   - [Homebrewインストール](#homebrewインストール)
-
-
-https://capitalp.jp/2017/12/16/naoki-1/
-だいたいここ参照させていただいてます。
+<br /><br />
+- [Homebrewメンテナンス](#homebrewは定期的にメンテナンスが必要です。以下のコマンドは手が空いたときにやっておきましょう。)
+- [主要なコマンドのインストール](#主要なコマンドのインストール)
+  - [gitインストール](#gitインストール)
+  - [gitインストール](#gitインストール)
 <br /><br /><br /><br />
 
 ## Homebrew
