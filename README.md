@@ -1,9 +1,9 @@
 # vccw
 
 ## Table of Contens
-- [Homebrew](#Homebrewのインストール)
+- [Homebrew](#Homebrew)
 - [Xcode](#Xcodeインストール)
-- [Homebrew](#Homebrewインストール)
+- [Homebrewインストール](#Homebrewインストール)
 
 
 https://capitalp.jp/2017/12/16/naoki-1/
