@@ -2,8 +2,8 @@
 
 ## Table of Contens
 - [Homebrew](#homebrew)
- - [Xcodeインストール](#xcodeインストール)
- - [Homebrewインストール](#homebrewインストール)
+  - [Xcodeインストール](#xcodeインストール)
+  - [Homebrewインストール](#homebrewインストール)
 
 
 https://capitalp.jp/2017/12/16/naoki-1/
