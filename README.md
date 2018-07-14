@@ -131,7 +131,7 @@ $ nodebrew setup
 ========================================
 Export a path to nodebrew:
 
-
+export PATH=$HOME/.nodebrew/current/bin:$PATH
 ========================================
 ```
 とかってですので```.bash_profile```に```export PATH=$HOME/.nodebrew/current/bin:$PATH```のPATHを追加（1行目とかに）
