@@ -4,11 +4,44 @@
 - [Homebrew](#homebrew)
   - [Xcodeインストール](#xcodeインストール)
   - [Homebrewインストール](#homebrewインストール)
-<br /><br />
+<br />
 - [Homebrewメンテナンス](#homebrewは定期的にメンテナンスが必要です。以下のコマンドは手が空いたときにやっておきましょう。)
+<br />
 - [主要なコマンドのインストール](#主要なコマンドのインストール)
   - [gitインストール](#gitインストール)
-  - [gitインストール](#gitインストール)
+  - [PHPインストール](#PHPインストール)
+  - [MySQLのインストール](#MySQLのインストール)
+<br />
+- [ WP-CLIのインストール](#wp-cliのインストール)
+<br />
+- [Nodeのインストール](#Nodeのインストール)
+  - [nodebrewをインストール](#nodebrewをインストール)
+  - [nodebrewで使いたいバージョン選択](#nodebrewで使いたいバージョン選択)
+<br />
+- [Rubyのインストール](#Rubyのインストール)
+<br />
+- [Gitの設定](#Gitの設定)
+<br />
+- [WP-CLIのコマンド補完を有効化する](#wp-cliのコマンド補完を有効化する)
+<br />
+- [仮想環境のインストール](#仮想環境のインストール)
+  - [Vagrantインストール](#vagrantインストール)
+  - [Virtualboxインストール](#virtualboxインストール)
+  - [Vagrantプラグインインストール](#vagrantプラグインインストール)
+<br />
+- [Varantの使い方](#vagrantの使い方)
+<br />
+- [vccw](#vccw)
+  - [vccwの使用方法](#vccwの使用方法)
+  - [vccw起動](#vccw起動)
+  - [vccwにphpMyAdminを入れる](#vccwにphpmyadminを入れる)
+  - [vccwのDBまるごと共有する](#vccwのdbまるごと共有する)
+  - [vagrant upでsqlを自動インポートさせる。](#vagrant upでsqlを自動インポートさせる。)
+  - [vccwとgit](#vccwとgit)
+  - [うまく動かない！！](#うまく動かない！！)
+  - [VCCWとgulpとbrowsersync](#vccwとgulpとbrowsersync)
+<br />
+- [TroubleShoot](#troubleshoot)
 <br /><br /><br /><br />
 
 ## Homebrew
@@ -240,7 +273,7 @@ fi
 
 
 
-### Varantの使い方
+### Vagrantの使い方
 
 ```vagrant up``` – 起動  
 ```vagrant halt``` –  停止  
