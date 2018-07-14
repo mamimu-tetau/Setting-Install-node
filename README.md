@@ -1,7 +1,7 @@
 # vccw
 
 ## Table of Contens
-- [Homebrew](#Homebrew)
+- [Homebrew](#homebrew)
 - [Xcode](#Xcodeインストール)
 - [Homebrewインストール](#Homebrewインストール)
 
