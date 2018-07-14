@@ -139,11 +139,18 @@ Export a path to nodebrew:
 $ vi ~/.bash_profile
 ```
 有効化
-export PATH=$HOME/.nodebrew/current/bin:$PATH
 ```
 $ source ~/.bash_profile
 ```
 
+#### nodebrewで使いたいバージョン選択
+```
+$ nodebrew ls
+```
+インストールしたバージョンのリストが表示されていればOK
+```
+$ nodebrew use v8.11.3
+```
 
 <br /><br /><br /><br />
 
