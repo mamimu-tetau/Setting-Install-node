@@ -1,6 +1,6 @@
 # vccw
 
-## Table of Contens
+## Toc
 - [Homebrew](#homebrew)
   - [Xcodeインストール](#xcodeインストール)
   - [Homebrewインストール](#homebrewインストール)
