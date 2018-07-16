@@ -334,9 +334,9 @@ touch ~/.vccw/config.yml
 今回はデスクトップに作ります
 ```
 $ cd ~/Desktop
-$ wp scaffold vccw vccw.test --host=vccw.test --ip=192.168.33.10
+$ wp scaffold vccw vccw.test --host=vccw.test --ip=192.168.33.10 --lang=ja
 ```
-```wp scaffold vccw [ディレクトリ名] --host=[ドメイン] --ip=192.168.33.10```
+```wp scaffold vccw [ディレクトリ名] --host=[ドメイン] --ip=192.168.33.10 --lang=ja```
 ホスト名 vccw.test の部分と IP アドレス 192.168.33.10 はお好みでどうぞ。  
   
 次にマシンを起動します。最初はBoxと呼ばれるベースになるハードディスクイメージをダウンロードしますので20分ほど時間がかかるかもしれません。
