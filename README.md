@@ -163,6 +163,9 @@ nodebrewで使えるコマンドが出てくればOK
 ```
 $ nodebrew install-binary v8.11.3
 ```
+※2018年7月18日現在でstableになっている最新バージョンはv10.6.0
+参考：https://nodejs.org/en/blog/
+
 セットアップ
 ```
 $ nodebrew setup
