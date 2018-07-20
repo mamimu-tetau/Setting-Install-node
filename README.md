@@ -159,6 +159,31 @@ $ nodebrew
 ```
 nodebrewで使えるコマンドが出てくればOK
 
+
+```
+========================================
+Export a path to nodebrew:
+
+export PATH=$HOME/.nodebrew/current/bin:$PATH
+========================================
+```
+とかってでるので```.bash_profile```に```export PATH=$HOME/.nodebrew/current/bin:$PATH```のPATHを追加（1行目とかに）<br /><br />
+viコマンドが初めての場合！！！ってなるかも。まずは基本的なviエディタの使い方は調べてね。  <br /><br />
+私の場合```i```キー押して通常のモードにして操作します。で```esc```キー押してコマンドモードに戻って```:wq```で保存です。やばい時は```esc```からの```:q!```で何もせず戻るw   
+
+.bash_profileが存在しない場合があるので
+```
+$ touch ~/.bash_profile
+```
+ほんで編集
+```
+$ vi ~/.bash_profile
+```
+有効化
+```
+$ source ~/.bash_profile
+```
+
 #### nodebrewで使いたいバージョンのnodeをインストール
 ```
 $ nodebrew install-binary v8.11.3
@@ -170,23 +195,7 @@ $ nodebrew install-binary v8.11.3
 ```
 $ nodebrew setup
 ```
-```
-========================================
-Export a path to nodebrew:
 
-export PATH=$HOME/.nodebrew/current/bin:$PATH
-========================================
-```
-とかってでるので```.bash_profile```に```export PATH=$HOME/.nodebrew/current/bin:$PATH```のPATHを追加（1行目とかに）<br /><br />
-viコマンドが初めての場合！！！ってなるかも。まずは基本的なviエディタの使い方は調べてね。  <br /><br />
-私の場合```i```キー押して通常のモードにして操作します。で```esc```キー押してコマンドモードに戻って```:wq```で保存です。やばい時は```esc```からの```:q!```で何もせず戻るw  
-```
-$ vi ~/.bash_profile
-```
-有効化
-```
-$ source ~/.bash_profile
-```
 
 #### nodebrewで使いたいバージョン選択
 ```
