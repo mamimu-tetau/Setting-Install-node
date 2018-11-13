@@ -159,6 +159,9 @@ $ nodebrew
 ```
 nodebrewで使えるコマンドが出てくればOK
 
+Nodeのバージョン変更とか
+https://qiita.com/oreo3@github/items/622fd6a09d5c1593fee4
+
 
 ```
 ========================================
