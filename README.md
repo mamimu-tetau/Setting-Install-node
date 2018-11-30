@@ -189,7 +189,7 @@ $ source ~/.bash_profile
 
 #### nodebrewで使いたいバージョンのnodeをインストール
 ```
-$ nodebrew install-binary v8.11.3
+$ nodebrew install-binary stable
 ```
 ※2018年7月18日現在でstableになっている最新バージョンはv10.6.0
 参考：https://nodejs.org/en/blog/
@@ -206,7 +206,7 @@ $ nodebrew ls
 ```
 インストールしたバージョンのリストが表示されていればOK
 ```
-$ nodebrew use v8.11.3
+$ nodebrew use v10.6.0
 ```
 
 <br /><br /><br /><br />
