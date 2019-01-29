@@ -517,4 +517,9 @@ vagrant global-status --prune
 ```
 でキャッシュを削除
 
-それでダメなら/User/あなた/VirtualBox VMs/該当ディレクトリ削除
+それでダメなら/User/あなた/VirtualBox VMs/該当ディレクトリ削除<br><br><br>
+
+
+## Snapshotファイルの肥大化
+ずっとVM使っていくとSnapshotファイルが肥大化してくるようです。.vmdkとかいうファイル。
+なのでたまにDBのエクスポートしてsite.ymlのバージョン合わしたりしてDestroyすると軽くなる
