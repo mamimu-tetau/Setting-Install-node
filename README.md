@@ -226,10 +226,10 @@ Gitにユーザー名とメールアドレスを設定します。今回は無�
 GitHubにサインアップしていない場合はサインアップしてください。  
 サインアップしたらGitHubのユーザー名を以下のように設定します。 username の部分をみなさんのGitHubのユーザー名と置き換えてください。  
 ```
-$ git config user.name "username"
+$ git config --global user.name "username"
 ```
 ```
-git config user.email "xxx@xxx.com"
+git config --global user.email "xxx@xxx.com"
 ```
 <br /><br /><br /><br />
 
