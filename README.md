@@ -12,39 +12,17 @@
   - [PHPインストール](#PHPインストール)
   - [MySQLのインストール](#MySQLのインストール)
 
-- [ WP-CLIのインストール](#wp-cliのインストール)
+- [Gitの設定](#gitの設定)
 
 - [Nodeのインストール](#nodeのインストール)
   - [nodebrewをインストール](#nodebrewをインストール)
   - [nodebrewで使いたいバージョン選択](#nodebrewで使いたいバージョン選択)
 
-- [Rubyのインストール](#rubyのインストール)
-
-- [Gitの設定](#gitの設定)
-
-- [WP-CLIのコマンド補完を有効化する](#wp-cliのコマンド補完を有効化する)
-
-- [仮想環境のインストール](#仮想環境のインストール)
-  - [Vagrantインストール](#vagrantインストール)
-  - [Virtualboxインストール](#virtualboxインストール)
-  - [Vagrantプラグインインストール](#vagrantプラグインインストール)
-
-- [Varantの使い方](#vagrantの使い方)
-
-- [vccw](#vccw)
-  - [vccwの使用方法](#vccwの使用方法)
-  - [vccw起動](#vccw起動)
-  - [vccwにphpMyAdminを入れる](#vccwにphpmyadminを入れる)
-  - [vccwのDBまるごと共有する](#vccwのdbまるごと共有する)
-  - [vagrant upでsqlを自動インポートさせる。](#vagrant-upでsqlを自動インポートさせる)
-  - [vccwとgit](#vccwとgit)
-  - [うまく動かない！！](#うまく動かない！！)
-  - [VCCWとgulpとbrowsersync](#vccwとgulpとbrowsersync)
-
-- [TroubleShoot](#troubleshoot)
 <br /><br /><br /><br />
 
 ## Homebrew
+以下はターミナルでのコマンドです。
+<br /><br /><br />
 
 ### Xcodeインストール
 ```
@@ -54,13 +32,15 @@ $ xcode-select --install
 ```
 $ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
+途中でパスワードを聞かれたらMacのユーザーパスワードを。
+
 ##### インストールされているかを確認
 ```
 $ brew doctor
 Your system is ready to brew.
 ```
-上のように Your system is ready to brew と表示されれば大丈夫。そうじゃなければ表示されているメッセージをよく読んで問題を解決しましょう。
-ここで適当にあきらめて次の処理に進んでも絶対にうまく行きません。
+ `Your system is ready to brew` と表示されれば大丈夫。そうじゃなければ表示されているメッセージをよく読んで問題を解決しましょう。<br />
+ここで適当にあきらめて次の処理に進んでも絶対にうまく行きません。<br />
 nodeとかパッケージ版でインストールしているとガンガンエラー出ますw
 <br /><br /><br /><br />
 
@@ -69,15 +49,15 @@ nodeとかパッケージ版でインストールしているとガンガンエ�
 
 ##### Homebrewは定期的にメンテナンスが必要です。以下のコマンドは手が空いたときにやっておきましょう。
 
-アプデ
+##### アプデ
 ```
 $ brew update && brew upgrade
 ```
-キャッシュを掃除
+##### キャッシュを掃除
 ```
 $ brew cleanup
 ```
-Homebrewの動作テスト
+##### Homebrewの動作テスト
 ```
 $ brew doctor
 ```
@@ -93,13 +73,19 @@ $ brew doctor
 $ brew install git curl
 ```
 ### PHPインストール
+以下のコマンドで既にインストールされているphpで問題なければphpインストールは飛ばしてください。
 ```
-$ brew install php72
+$ php -v
+PHP 7.3.11 (cli) (built: Dec 13 2019 19:21:21) ( NTS )
 ```
-最新版をインストールしときます？
-
+使いたいPHPバージョンをインストールします。必要に応じて切り替える場合は
+[brewでphpバージョン切り替え](https://qiita.com/gyarasu/items/0ffd0fb5761b9d164d39)
+```
+$ brew install php73
+```
 
 ### MySQLのインストール
+Local by flywheelなどでDBを利用する場合は不要です。インストールは飛ばしてください。
 ```
 $ brew install mysql
 ```
@@ -109,8 +95,140 @@ $ brew services start mysql
 ```
 <br /><br /><br /><br />
 
+## Gitの設定
+Gitにユーザー名とメールアドレスを設定します。今回は無難にGitHubのユーザー名とメールアドレスを設定しましょう。  
+GitHubにサインアップしていない場合はサインアップしてください。  
+サインアップしたらGitHubのユーザー名を以下のように設定します。 username の部分をみなさんのGitHubのユーザー名と置き換えてください。  
+```
+$ git config --global user.name "username"
+```
+```
+git config --global user.email "xxx@xxx.com"
+```
+<br /><br /><br /><br />
 
 
+
+
+
+## Nodeのインストール
+
+~~gulpでgulp-sassを使う場合バージョン8.xが求められたのでnodeのバージョンを切り替えられるnodebrewでのインストールを推しますw~~<br />
+Gulp v4リリースで特にバージョン切り替えは必要ないのですが管理用に入れておいたほうが良いです。
+```
+$ brew ls //nodeが表示されたらアンインストール 
+$ brew uninstall --force node
+```
+nodeが表示されたらアンインストール 。<br />
+```
+$ node -v 
+```
+でバージョンが出てくればパッケージ版のnodeをすでにインストールしている模様なのでアンインストール。。。苦戦してくだしあ）  
+<br /><br />
+
+#### nodebrewをインストール
+```
+$ brew install nodebrew
+```
+```
+$ nodebrew
+nodebrew 1.0.1
+...
+```
+nodebrewで使えるコマンドが出てくればOK
+<br /><br />
+
+
+
+#### nodebrewで安定版バージョンのnodeをインストール
+
+```
+$ nodebrew install-binary stable
+```
+stableは現行の安定版ってことなのでバージョン指定の場合はv12.16.0とか入れてください。
+参考：https://nodejs.org/en/blog/
+
+
+```
+Fetching: https://nodejs.org/dist/v12.16.0/node-v12.16.0-darwin-x64.tar.gz
+Warning: Failed to create the file                                                        
+Warning: /Users/hacca/.nodebrew/src/v12.16.0/node-v12.16.0-darwin-x64.tar.gz: 
+Warning: No such file or directory
+                                                                                       0.0%
+curl: (23) Failed writing body (0 != 1019)
+download failed: https://nodejs.org/dist/v12.16.0/node-v12.16.0-darwin-x64.tar.gz
+```
+ディレクトリがねぇぞバカヤローって場合は。。
+
+```
+$ nodebrew install-binary stable
+```
+
+#### nodebrewのセットアップ
+```
+$ nodebrew setup
+========================================
+Export a path to nodebrew:
+
+export PATH=$HOME/.nodebrew/current/bin:$PATH
+========================================
+```
+
+
+#### 環境変数を追加
+```.bash_profile```に```export PATH=$HOME/.nodebrew/current/bin:$PATH```のPATHを追加（1行目とかに）<br /><br />
+
+.bash_profileが存在しない場合があるので
+```
+$ touch ~/.bash_profile
+```
+ほんで編集
+```
+$ vi ~/.bash_profile
+```
+```.bash_profile```に```export PATH=$HOME/.nodebrew/current/bin:$PATH```のPATHを追加（1行目とかに）<br />
+viコマンドが初めての場合！！！ってなるかも。まずは基本的なviエディタの使い方は調べてね。<br /><br />
+私の場合```i```キー押して通常のモードにして操作します。で```esc```キー押してコマンドモードに戻って```:wq```で保存です。やばい時は```esc```からの```:q!```で何もせず戻るw 
+<br /><br />
+
+有効化
+```
+$ source ~/.bash_profile
+```
+
+#### nodeのバージョン選択
+```
+$ nodebrew ls
+
+current: none
+```
+インストールされているnodeのバージョンを確認。`v12.16.0 current: none`とかが出る
+
+```
+$ nodebrew use v12.16.0　//バージョンを指定
+$ node -v
+```
+確認。`v12.16.0`バージョンが出ればOK。
+
+#### nodeのバージョン変更とかはこちらを
+https://qiita.com/oreo3@github/items/622fd6a09d5c1593fee4
+
+<br /><br /><br /><br />
+
+
+
+## Rubyのインストール
+```
+$ brew install ruby
+```
+<br /><br /><br /><br />
+
+
+
+
+<br /><br /><br /><br />
+
+# ここから先はWP-CLIとかvccwのインストール。Gulp使うだけならここまで。
 
 ## WP-CLIのインストール
 ```
@@ -134,103 +252,6 @@ WP-CLI project config:
 WP-CLI version:	1.5.0-alpha-d71d228
 ```
 この時点でうまく行っていなければ一番最初からやり直してください。
-<br /><br /><br /><br />
-
-
-
-## Nodeのインストール
-
-gulpでgulp-sassを使う場合バージョン8.xが求められたのでnodeのバージョンを切り替えられるnodebrewでのインストールを推しますw
-```
-Found bindings for the following environments:
-  - OS X 64-bit with Node.js 8.x
-```
-こんなエラー <br /><br /> 
-
-homebrewでnodeもインストールしていた場合はnodeをアンインストール  
-（パッケージ版のnodeをすでにインストールしている場合は。。。苦戦してくだしあ）  
-```
-$ brew uninstall --force node
-```
-#### nodebrewをインストール
-```
-$ brew install nodebrew
-$ nodebrew
-```
-nodebrewで使えるコマンドが出てくればOK
-
-Nodeのバージョン変更とか
-https://qiita.com/oreo3@github/items/622fd6a09d5c1593fee4
-
-
-```
-========================================
-Export a path to nodebrew:
-
-export PATH=$HOME/.nodebrew/current/bin:$PATH
-========================================
-```
-とかってでるので```.bash_profile```に```export PATH=$HOME/.nodebrew/current/bin:$PATH```のPATHを追加（1行目とかに）<br /><br />
-viコマンドが初めての場合！！！ってなるかも。まずは基本的なviエディタの使い方は調べてね。  <br /><br />
-私の場合```i```キー押して通常のモードにして操作します。で```esc```キー押してコマンドモードに戻って```:wq```で保存です。やばい時は```esc```からの```:q!```で何もせず戻るw   
-
-.bash_profileが存在しない場合があるので
-```
-$ touch ~/.bash_profile
-```
-ほんで編集
-```
-$ vi ~/.bash_profile
-```
-有効化
-```
-$ source ~/.bash_profile
-```
-
-#### nodebrewで使いたいバージョンのnodeをインストール
-```
-$ nodebrew install-binary stable
-```
-※2018年7月18日現在でstableになっている最新バージョンはv10.6.0
-参考：https://nodejs.org/en/blog/
-
-セットアップ
-```
-$ nodebrew setup
-```
-
-
-#### nodebrewで使いたいバージョン選択
-```
-$ nodebrew ls
-```
-インストールしたバージョンのリストが表示されていればOK
-```
-$ nodebrew use v10.6.0
-```
-
-<br /><br /><br /><br />
-
-
-
-## Rubyのインストール
-```
-$ brew install ruby
-```
-<br /><br /><br /><br />
-
-
-
-## Gitの設定
-Gitにユーザー名とメールアドレスを設定します。今回は無難にGitHubのユーザー名とメールアドレスを設定しましょう。  
-GitHubにサインアップしていない場合はサインアップしてください。  
-サインアップしたらGitHubのユーザー名を以下のように設定します。 username の部分をみなさんのGitHubのユーザー名と置き換えてください。  
-```
-$ git config --global user.name "username"
-```
-```
-git config --global user.email "xxx@xxx.com"
-```
 <br /><br /><br /><br />
 
 
