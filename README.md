@@ -37,7 +37,6 @@ $ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/inst
 ##### インストールされているかを確認
 ```
 $ brew doctor
-Your system is ready to brew.
 ```
  `Your system is ready to brew` と表示されれば大丈夫。そうじゃなければ表示されているメッセージをよく読んで問題を解決しましょう。<br />
 ここで適当にあきらめて次の処理に進んでも絶対にうまく行きません。<br />
@@ -73,11 +72,11 @@ $ brew doctor
 $ brew install git curl
 ```
 ### PHPインストール
-以下のコマンドで既にインストールされているphpで問題なければphpインストールは飛ばしてください。
+以下のコマンドで
 ```
 $ php -v
-PHP 7.3.11 (cli) (built: Dec 13 2019 19:21:21) ( NTS )
 ```
+`PHP 7.3.11 (cli) (built: Dec 13 2019 19:21:21) ( NTS )`など既にインストールされているphpで問題なければphpインストールは飛ばしてください。<br />
 使いたいPHPバージョンをインストールします。必要に応じて切り替える場合は
 [brewでphpバージョン切り替え](https://qiita.com/gyarasu/items/0ffd0fb5761b9d164d39)
 ```
