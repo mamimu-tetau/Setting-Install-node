@@ -168,7 +168,7 @@ download failed: https://nodejs.org/dist/v12.16.0/node-v12.16.0-darwin-x64.tar.g
 ディレクトリがねぇぞバカヤローって場合は。。
 
 ```
-$ nodebrew install-binary stable
+$ mkdir -p ~/.nodebrew/src
 ```
 
 #### nodebrewのセットアップ
