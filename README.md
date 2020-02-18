@@ -223,18 +223,20 @@ https://qiita.com/oreo3@github/items/622fd6a09d5c1593fee4
 
 
 
+
+
+
+
+
+
+
+# ここから先はWP-CLIとかvccwのインストール。Gulp使うだけならここまで。
+
 ## Rubyのインストール
 ```
 $ brew install ruby
 ```
 <br /><br /><br /><br />
-
-
-
-
-<br /><br /><br /><br />
-
-# ここから先はWP-CLIとかvccwのインストール。Gulp使うだけならここまで。
 
 ## WP-CLIのインストール
 ```
