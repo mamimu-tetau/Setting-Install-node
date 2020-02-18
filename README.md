@@ -103,7 +103,7 @@ GitHubにサインアップしていない場合はサインアップしてく�
 $ git config --global user.name "username"
 ```
 ```
-git config --global user.email "xxx@xxx.com"
+$ git config --global user.email "xxx@xxx.com"
 ```
 <br /><br /><br /><br />
 
@@ -115,16 +115,24 @@ git config --global user.email "xxx@xxx.com"
 
 ~~gulpでgulp-sassを使う場合バージョン8.xが求められたのでnodeのバージョンを切り替えられるnodebrewでのインストールを推しますw~~<br />
 Gulp v4リリースで特にバージョン切り替えは必要ないのですが管理用に入れておいたほうが良いです。
+
+#### nodeがすでにインストールされていないか確認。
 ```
-$ brew ls //nodeが表示されたらアンインストール 
+$ brew ls 
+```
+表示された中にnodeあるならアンインストールが必要です。 
+```
 $ brew uninstall --force node
 ```
-nodeが表示されたらアンインストール 。<br />
+
+<br />
+nodeがすでに他の方法でインストールされていないか確認。
 ```
 $ node -v 
 ```
-でバージョンが出てくればパッケージ版のnodeをすでにインストールしている模様なのでアンインストール。。。苦戦してくだしあ）  
+バージョンが出てくればパッケージ版のnodeをすでにインストールしている模様なのでアンインストール。。。苦戦してくだしあ）  
 <br /><br />
+
 
 #### nodebrewをインストール
 ```
