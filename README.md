@@ -20,6 +20,73 @@
 
 <br /><br /><br /><br />
 
+
+## macのデフォルトがbashではなくzshになりました。
+<br /><br />
+### とりあえずnpmとGulpが使いたい
+#### HomebrewでインストールしたnodebrewではNode.jsやnpｍが使えない..
+Homebrewからインストールしたnode.jsがあれば一応アンインストール
+```
+$ nodebrew uninstall バージョン
+$ nodebrew clear バージョン
+$ brew uninstall nodebrew
+```
+<br /><br />
+
+### Xcodeインストール
+```
+$ xcode-select --install
+```
+### nodebrewインストール
+```
+$ curl -L git.io/nodebrew | perl - setup
+```
+途中でパスワードを聞かれたらMacのユーザーパスワードを。
+
+#### パスを通す
+最後にこんなんでるので
+```
+========================================
+Export a path to nodebrew:
+
+export PATH=$HOME/.nodebrew/current/bin:$PATH
+========================================
+```
+
+```.zshrc```に```export PATH=$HOME/.nodebrew/current/bin:$PATH```のPATHを追加（1行目とかに）<br /><br />
+
+.zshrcが存在しない場合があるので
+```
+$ touch ~/.zshrc
+```
+ほんで編集
+```
+$ vi ~/.zshrc
+```
+有効化
+```
+$ source ~/.zshrc
+```
+### nodeのインストール
+```
+$ nodebrew install-binary stable
+```
+### nodeのバージョン選択と有効化
+```
+$ nodebrew ls
+v14.5.0とか
+
+$ nodebrew use v14.5.0
+```
+### gulpのCLIをインストール
+```
+$ npm i -g gulp
+```
+
+<br /><br /><br /><br /><br /><br />
+
+
+
 ## Homebrew
 以下はターミナルでのコマンドです。
 <br /><br /><br />
