@@ -33,10 +33,6 @@ $ brew uninstall nodebrew
 ```
 <br /><br />
 
-### Xcodeインストール
-```
-$ xcode-select --install
-```
 
 ## Homebrew
 以下はターミナルでのコマンドです。
