@@ -125,9 +125,11 @@ $ npm i -g gulp
 <br /><br /><br /><br /><br /><br />
 
 
+とりあえずここまででnpmとnodeとgulpは使える！
 
 
 
+<br /><br /><br /><br /><br /><br />
 
 
 
