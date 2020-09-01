@@ -37,6 +37,49 @@ $ brew uninstall nodebrew
 ```
 $ xcode-select --install
 ```
+
+## Homebrew
+以下はターミナルでのコマンドです。
+<br /><br /><br />
+
+### Xcodeインストール
+```
+$ xcode-select --install
+```
+### Homebrewインストール
+```
+$ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+```
+途中でパスワードを聞かれたらMacのユーザーパスワードを。
+
+##### インストールされているかを確認
+```
+$ brew doctor
+```
+ `Your system is ready to brew` と表示されれば大丈夫。そうじゃなければ表示されているメッセージをよく読んで問題を解決しましょう。<br />
+ここで適当にあきらめて次の処理に進んでも絶対にうまく行きません。<br />
+nodeとかパッケージ版でインストールしているとガンガンエラー出ますw
+<br /><br /><br /><br />
+
+
+
+
+##### Homebrewは定期的にメンテナンスが必要です。以下のコマンドは手が空いたときにやっておきましょう。
+
+##### アプデ
+```
+$ brew update && brew upgrade
+```
+##### キャッシュを掃除
+```
+$ brew cleanup
+```
+##### Homebrewの動作テスト
+```
+$ brew doctor
+```
+<br /><br /><br /><br />
+
 ### nodebrewインストール
 ```
 $ curl -L git.io/nodebrew | perl - setup
@@ -87,47 +130,7 @@ $ npm i -g gulp
 
 
 
-## Homebrew
-以下はターミナルでのコマンドです。
-<br /><br /><br />
 
-### Xcodeインストール
-```
-$ xcode-select --install
-```
-### Homebrewインストール
-```
-$ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-```
-途中でパスワードを聞かれたらMacのユーザーパスワードを。
-
-##### インストールされているかを確認
-```
-$ brew doctor
-```
- `Your system is ready to brew` と表示されれば大丈夫。そうじゃなければ表示されているメッセージをよく読んで問題を解決しましょう。<br />
-ここで適当にあきらめて次の処理に進んでも絶対にうまく行きません。<br />
-nodeとかパッケージ版でインストールしているとガンガンエラー出ますw
-<br /><br /><br /><br />
-
-
-
-
-##### Homebrewは定期的にメンテナンスが必要です。以下のコマンドは手が空いたときにやっておきましょう。
-
-##### アプデ
-```
-$ brew update && brew upgrade
-```
-##### キャッシュを掃除
-```
-$ brew cleanup
-```
-##### Homebrewの動作テスト
-```
-$ brew doctor
-```
-<br /><br /><br /><br />
 
 
 
