@@ -41,6 +41,9 @@ $ brew uninstall nodebrew
 ### Xcodeインストール
 ```
 $ xcode-select --install
+
+202010 ターミナルからだと「コマンドラインツールがない」と断られた。コマンドラインをインストールしようとするもそれも断られた。。
+なので、App Storeからダウンロードしたらできた。
 ```
 ### Homebrewインストール
 ```
