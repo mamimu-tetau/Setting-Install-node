@@ -60,7 +60,7 @@ echo $SHELL
 ```
 vi ~/.zshrc(or ~/.bash_profile)
 ```
-```.zshrc```に```export PATH="/opt/homebrew/bin:$PATH"```のPATHを追加（1行目とかに）
+```.zshrc(.bash_profile)```に```export PATH="/opt/homebrew/bin:$PATH"```のPATHを追加（1行目とかに）
 
 ##### インストールされているかを確認
 ```
