@@ -62,6 +62,11 @@ vi ~/.zshrc(or ~/.bash_profile)
 ```
 ```.zshrc(.bash_profile)```に```export PATH="/opt/homebrew/bin:$PATH"```のPATHを追加（1行目とかに）
 
+更新（有効化）
+```
+source ~/.zshrc(or ~/.bash_profile)
+```
+
 ##### インストールされているかを確認
 ```
 $ brew doctor
