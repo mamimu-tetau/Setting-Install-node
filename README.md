@@ -58,6 +58,23 @@ $ brew doctor
  `Your system is ready to brew` と表示されれば大丈夫。そうじゃなければ表示されているメッセージをよく読んで問題を解決しましょう。<br />
 ここで適当にあきらめて次の処理に進んでも絶対にうまく行きません。<br />
 nodeとかパッケージ版でインストールしているとガンガンエラー出ますw
+```
+zsh: command not found: brew
+```
+って出た場合はたぶんパスが通ってないので。。
+
+```
+echo $SHELL
+```
+・ /bin/zsh とでたら ~/.zshrc ファイル
+・/bin/bash とでたら ~/.bash_profile ファイル
+を編集していきます。
+```
+vi ~/.zshrc(or ~/.bash_profile)
+```
+```.zshrc```に```export PATH="/opt/homebrew/bin:$PATH"```のPATHを追加（1行目とかに）
+
+
 <br /><br /><br /><br />
 
 
