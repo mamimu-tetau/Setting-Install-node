@@ -47,7 +47,7 @@ $ xcode-select --install
 ```
 ### Homebrewインストール
 ```
-$ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+$ /usr/bin -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 途中でパスワードを聞かれたらMacのユーザーパスワードを。
 
